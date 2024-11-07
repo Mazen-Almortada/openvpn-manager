@@ -1,0 +1,36 @@
+<!-- templates/add_client.html -->
+{% extends "base.html" %}
+{% block content %}
+<h2>Add New VPN Client</h2>
+<form action="{{ url_for('add_client') }}" method="POST">
+    <div class="mb-3">
+        <label for="client_name" class="form-label">Client Name</label>
+        <input type="text" class="form-control" id="client_name" name="client_name" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password Protection</label>
+        <select class="form-select" name="pass_option" id="pass_option" required onchange="togglePasswordField()">
+            <option value="nopass">No Password</option>
+            <option value="withpass">Password Protected</option>
+        </select>
+    </div>
+    <div class="mb-3" id="passwordField" style="display: none;">
+        <label for="client_password" class="form-label">Enter Password</label>
+        <input type="password" class="form-control" id="client_password" name="client_password">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Client</button>
+</form>
+
+<script>
+    function togglePasswordField() {
+        const passOption = document.getElementById("pass_option").value;
+        const passwordField = document.getElementById("passwordField");
+        if (passOption === "withpass") {
+            passwordField.style.display = "block";
+        } else {
+            passwordField.style.display = "none";
+        }
+    }
+</script>
+{% endblock %}
+

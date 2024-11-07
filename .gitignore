@@ -1,0 +1,63 @@
+# Ignore Python compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignore environment files
+
+.venv/
+env/
+venv/
+ENV/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Flask app specific files and folders
+instance/
+migrations/
+
+# Ignore VPN configuration files
+clients/*.ovpn
+
+# Ignore virtual environment folder
+# Adjust "venv" if your environment folder has a different name
+.venv/
+.vscode/
+.idea/
+
+# Ignore logs
+*.log
+
+# Ignore temporary files and backups
+*.bak
+*.swp
+*.tmp
+*.temp
+*.old
+
+# Ignore package files and caches
+pip-log.txt
+pip-delete-this-directory.txt
+__pycache__/
+cache/
+.pytest_cache/
+
+# Ignore Python egg and build files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore database files
+*.db
+*.sqlite3
+*.sqlite
+
+# Ignore MacOS files
+.DS_Store
